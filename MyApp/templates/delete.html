@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+{% csrf_token %}
+<div class="h-100 p-3 bg-light border rounded-3">
+  Do you really want to delele {{form.title}} ?
+</div><br>
+<div>
+  <a href="{% url 'index' %}"><input class="btn btn-warning"  type="submit" name="" value="No"></a>
+  <input class="btn btn-danger"  type="submit" name="" value="Yes">
+</div>
+</form>
+
+{% endblock %}

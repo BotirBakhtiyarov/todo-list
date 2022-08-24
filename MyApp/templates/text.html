@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <div>
+    <input class="btn btn-primary"  type="submit" name="" value="Save">
+  </div>
+</form>
+<!-- <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Title</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Date</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+</div> -->
+{% endblock %}

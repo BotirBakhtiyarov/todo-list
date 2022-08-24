@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  <!-- <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">{{form.title}}</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">{{form.date.as_p}}</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Date">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">{{from.text.as_p}}</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+  </div>
+    <div>
+      <input class="btn btn-primary"  type="submit" name="" value="Save">
+
+  </div>
+  {{form.title}} -->
+  {{form.as_p}}
+  <a href="url 'index'"><input class="btn btn-primary"  type="submit" name="" value="Save"></a>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="d-flex justify-content-center">Please Log In</h1>
+<div class="d-flex justify-content-center">
+  <form class="" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="username" name="username" placeholder="Username">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+
+    <input type="submit" name="" value="Log In">
+  </form>
+</div>
+
+{% endblock %}
