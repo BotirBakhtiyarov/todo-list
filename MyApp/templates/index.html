@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-
-{% for list in todo_list %}
-  <br>
-
   <div class="container">
+{% for list in todo_list %}
     <div class="h-100 p-2 bg-light border rounded-3" href="{% url 'edit' list.pk %}">
       {{list.title}} | {{list.date}}
     </div><br>
     <div class="h-100 p-3 bg-light border rounded-3">
       {{list.text}}
-    </div><br>
+    </div>
+    <br>
     <div>
       {% if user.is_authenticated %}
-      <a href="{% url 'edit' pk=list.pk %}"><input  class="btn btn-warning"  type="submit" name="" value="Edit"></a>
-      <a href="{% url 'delete' pk=list.pk %}"><input class="btn btn-danger"  type="submit" name="" value="delete"></a>
+        <a href="{% url 'edit' pk=list.pk %}"><input  class="btn btn-warning"  type="submit" name="" value="Edit"></a>
+        <a href="{% url 'delete' pk=list.pk %}"><input class="btn btn-danger"  type="submit" name="" value="delete"></a>
+        <br>
       {% else %}
-
       {% endif %}
-  </div>
+<br>
 {% endfor %}
+</div>
+
 {% endblock %}
